@@ -21,13 +21,13 @@ pipeline {
                 sh "mvn clean package"
             }
         }
-        //stage('SonarQube Analysis') {
-            //steps {
-                //withSonarQubeEnv(installationName: 'sonarqube') { // You can override the credential to be used
-                //sh 'mvn sonar:sonar'
-               // }
-           // }
-        //}
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv(installationName: 'sonarqube') { // You can override the credential to be used
+                sh 'mvn sonar:sonar'
+                }
+            }
+        }
         stage('Nexus Artifact Upload') {
             steps {
 	       script {
