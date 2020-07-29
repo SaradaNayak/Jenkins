@@ -43,7 +43,7 @@ pipeline {
                             groupId: pom.groupId,
                             version: pom.version,
                             repository: 'first-pipeline',
-                            credentialsId: 'nexus-credentials',
+                            credentialsId: 'nexus-credential',
                             artifacts: [
                                 [artifactId: pom.artifactId,
                                 classifier: '',
