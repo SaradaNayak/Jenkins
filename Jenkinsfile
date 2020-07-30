@@ -81,7 +81,7 @@ pipeline {
 		      echo 'Deploying code in k8s Dev'
                       step([
                       $class: 'KubernetesEngineBuilder',
-                      projectId: 'inlaid-micron-268506',
+                      projectId: 'devops-277206',
                       clusterName: 'prod',
                       location: 'us-central1-c',
                       manifestPattern: 'jenkins-deployment.yaml',
@@ -90,7 +90,7 @@ pipeline {
 		
 		      step([
                       $class: 'KubernetesEngineBuilder',
-                      projectId: 'inlaid-micron-268506',
+                      projectId: 'devops-277206',
                       clusterName: 'prod',
                       location: 'us-central1-c',
                       manifestPattern: 'jenkins-deployment-service.yaml',
