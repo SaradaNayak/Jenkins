@@ -85,7 +85,7 @@ pipeline {
                       clusterName: 'prod',
                       location: 'us-central1-c',
                       manifestPattern: 'jenkins-deployment.yaml',
-                      credentialsId: 'inlaid-micron-268506',
+                      credentialsId: 'devops-277206',
                       verifyDeployments: false])
 		
 		      step([
@@ -94,7 +94,7 @@ pipeline {
                       clusterName: 'prod',
                       location: 'us-central1-c',
                       manifestPattern: 'jenkins-deployment-service.yaml',
-                      credentialsId: 'inlaid-micron-268506',
+                      credentialsId: 'devops-277206',
                       verifyDeployments: false])
                    } 
 		   else if (params.ENVIRONMENT == 'uat') {
